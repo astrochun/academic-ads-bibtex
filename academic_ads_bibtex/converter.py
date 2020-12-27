@@ -1,6 +1,3 @@
-import re
-
-
 class Convert:
     """
     Main class to perform BibTeX conversion for Academic compatibility
