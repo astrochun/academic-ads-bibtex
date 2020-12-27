@@ -11,8 +11,12 @@ class Convert:
         if out_filename is None:
             self.out_filename = self.filename.replace('.bbl', '_revised.bbl')
 
+        # Import BibTeX file and journal database
         self.bibtex_content = self.import_file()
         self.db_dict = self.import_database()
+
+        # Update journal to full name
+        self.bibtex_revised = self.replace()
 
     def import_file(self):
         with open(self.filename, 'r') as f:
@@ -35,8 +39,8 @@ class Convert:
 
         return bibtex_revised
 
-    def write_file(self, bibtex_revised):
+    def write_file(self):
         print(f"Writing : {self.out_filename}")
         with open(self.out_filename, 'w') as f:
-            f.writelines(bibtex_revised)
+            f.writelines(self.bibtex_revised)
         f.close()
