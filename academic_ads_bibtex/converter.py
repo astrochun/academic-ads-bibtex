@@ -34,3 +34,10 @@ class Convert:
             bibtex_revised = bibtex_revised.replace(f'\{key}', value)
 
         return bibtex_revised
+
+    def write_file(self, bibtex_revised):
+        outfile = self.filename.replace('.bbl', '_revised.bbl')
+        print(f"Writing : {outfile}")
+        with open(outfile, 'w') as f:
+            f.writelines(bibtex_revised)
+        f.close()
