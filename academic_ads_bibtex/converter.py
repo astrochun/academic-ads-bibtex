@@ -1,15 +1,16 @@
+from pathlib import Path
+
+
 class Convert:
     """
     Main class to perform BibTeX conversion for Academic compatibility
     """
 
-    def __init__(self, filename, db_filename, out_filename=None):
+    def __init__(self, filename, db_filename, out_filename):
 
         self.filename = filename
         self.db_filename = db_filename
-
-        if out_filename is None:
-            self.out_filename = self.filename.replace('.bbl', '_revised.bbl')
+        self.out_filename = out_filename
 
         # Import BibTeX file and journal database
         self.bibtex_content = self.import_file()
