@@ -3,10 +3,13 @@ class Convert:
     Main class to perform BibTeX conversion for Academic compatibility
     """
 
-    def __init__(self, filename, db_filename):
+    def __init__(self, filename, db_filename, out_filename=None):
 
         self.filename = filename
         self.db_filename = db_filename
+
+        if out_filename is None:
+            self.out_filename = self.filename.replace('.bbl', '_revised.bbl')
 
         self.bibtex_content = self.import_file()
         self.db_dict = self.import_database()
@@ -33,8 +36,7 @@ class Convert:
         return bibtex_revised
 
     def write_file(self, bibtex_revised):
-        outfile = self.filename.replace('.bbl', '_revised.bbl')
-        print(f"Writing : {outfile}")
-        with open(outfile, 'w') as f:
+        print(f"Writing : {self.out_filename}")
+        with open(self.out_filename, 'w') as f:
             f.writelines(bibtex_revised)
         f.close()
