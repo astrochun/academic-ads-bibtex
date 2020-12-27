@@ -1,0 +1,30 @@
+#!/usr/bin/env python
+
+from os.path import dirname, join
+import argparse
+
+from academic_ads_bibtex import converter, __file__
+
+if __name__ == '__main__':
+
+    parser = argparse.ArgumentParser(
+        description='Main command-line driver For Academic ADS BibTeX.')
+    parser.add_argument('-f', '--filename', required=True,
+                        help='Full path of BibTeX file (.bbl)')
+    parser.add_argument('-d', '--db_filename',
+                        help='Full path of input journal database (optional)')
+    parser.add_argument('-o', '--out_filename',
+                        help='Full path of output BibTeX file (optional)')
+    args = parser.parse_args()
+    vargs = vars(args)
+
+    if vargs['db_filename'] is None:
+        vargs['db_filename'] = join(dirname(dirname(__file__)),
+                                    'bibtex_journals.db')
+
+    # Import file
+    c = converter.Convert(vargs['filename'],
+                          vargs['db_filename'],
+                          out_filename=vargs['out_filename'])
+
+    c.write_file()
