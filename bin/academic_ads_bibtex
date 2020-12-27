@@ -3,7 +3,13 @@
 import argparse
 from pathlib import Path
 
-from academic_ads_bibtex import converter, __file__
+from academic_ads_bibtex import converter
+from academic_ads_bibtex import __file__, __version__
+from academic_ads_bibtex.logger import LogClass
+
+from datetime import date
+
+today = date.today()
 
 if __name__ == '__main__':
 
@@ -23,6 +29,15 @@ if __name__ == '__main__':
     p = Path(vargs['filename'])
     vargs['filename'] = p
 
+    log_filename = p.parent / \
+                   f"academic_ads_bibtex.{today.strftime('%Y-%m-%d')}.log"
+    log = LogClass(log_filename).get_logger()
+
+    log.info("********************************")
+    log.info("Starting academic_ads_bibtex ...")
+    log.info(f"Version: {__version__}")
+    log.info(f"Logs are stored in : {log_filename}")
+
     if vargs['db_filename'] is None:
         vargs['db_filename'] = root_dir / "bibtex_journals.db"
     else:
@@ -37,6 +52,10 @@ if __name__ == '__main__':
     # Import file
     c = converter.Convert(vargs['filename'],
                           vargs['db_filename'],
-                          out_filename=vargs['out_filename'])
+                          out_filename=vargs['out_filename'],
+                          log=log)
 
     c.write_file()
+
+    log.info("Finished academic_ads_bibtex!")
+    log.info("*****************************")

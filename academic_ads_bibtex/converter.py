@@ -1,3 +1,6 @@
+from .logger import log_stdout
+
+
 class Convert:
     """
     Main class to perform BibTeX conversion for Academic compatibility
@@ -27,8 +30,12 @@ class Convert:
       Write revised BibTeX file
     """
 
-    def __init__(self, filename, db_filename, out_filename):
+    def __init__(self, filename, db_filename, out_filename, log=None):
 
+        if log is None:
+            log = log_stdout()
+
+        self.log = log
         self.filename = filename
         self.db_filename = db_filename
         self.out_filename = out_filename
@@ -42,6 +49,7 @@ class Convert:
 
     def import_file(self):
         """Import BibTeX file"""
+        self.log.info(f"Reading: {self.filename}")
         with open(self.filename, 'r') as f:
             bibtex_content = f.read()
         f.close()
@@ -49,6 +57,7 @@ class Convert:
 
     def import_database(self):
         """Import journal database file"""
+        self.log.info(f"Reading: {self.db_filename}")
         with open(self.db_filename, 'r') as f:
             content = f.read()
         db_list = content.split("\n")
@@ -66,7 +75,7 @@ class Convert:
 
     def write_file(self):
         """Write revised BibTeX file"""
-        print(f"Writing : {self.out_filename}")
+        self.log.info(f"Writing : {self.out_filename}")
         with open(self.out_filename, 'w') as f:
             f.writelines(self.bibtex_revised)
         f.close()
