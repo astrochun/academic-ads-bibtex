@@ -69,7 +69,9 @@ class Convert:
         """Replace journal abbreviations"""
         bibtex_revised = str(self.bibtex_content)
         for key, value in self.db_dict.items():
-            bibtex_revised = bibtex_revised.replace(f'\{key}', value)
+            in_str = '{' + f'\{key}' + '}'
+            out_str = '{' + f'{value}' + '}'
+            bibtex_revised = bibtex_revised.replace(in_str, out_str)
 
         return bibtex_revised
 
