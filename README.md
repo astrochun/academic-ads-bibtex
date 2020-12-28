@@ -10,10 +10,11 @@
 
 ## Overview
 
-The Hugo Academic admin tool allows for the ingestion of BibTeX records to
-add to the publication list. One easy solution is to use the NASA ADS to
-retrieve set records from the library. However, such records often contain
-LaTeX `\newcommand`. For example:
+The [Hugo Academic admin tool](https://github.com/wowchemy/hugo-academic-cli)
+allows for the ingestion of BibTeX records to add to the publication list.
+One easy solution is to use the NASA ADS to retrieve set records from the
+library. However, such records often contain LaTeX `\newcommand`.
+For example:
 
 ```
 @ARTICLE{2016ApJS..226....5L,
@@ -36,13 +37,15 @@ archivePrefix = "arXiv",
 }
 ```
 
-Here, the journal name is simplified to "\apjs". This ends up propagating into Hugo Academic
+Here, the journal name is simplified to "\apjs". This ends up propagating into
+Hugo Academic sites. To fix this, this simple pure Python script will convert
+such aliases into the full journal name. It uses a journal database to
+conduct the replacement.
 
 
 ## Getting Started
 
 These instructions will have the code running.
-
 
 ### Installation Instructions
 
@@ -67,11 +70,12 @@ $ (sudo) python setup.py install
 
 ## Execution
 
-The primary script to execute is [`academic_ads_bibtex`](bin/academic_ads_bibtex)
+The primary script to execute is [`academic_ads_bibtex`](bin/academic_ads_bibtex).
+The above installation will include this executable in your python
+environmental path.
 
-Execution requires only one argument, which is the full path
-to the BibTeX file. It can be provided with the `-f` or `--filename` 
-command-line flags.
+Execution requires only one argument, which is the full path to the BibTeX
+file. It can be provided with the `-f` or `--filename` command-line flags.
 
 ```
 $ academic_ads_bibtex -f /full/path/to/my_pubs.bbl
@@ -92,7 +96,7 @@ A log file is constructed: `/full/path/to/academic_ads_bibtex.YYYY-MM-DD.log`
 ## Versioning
 
 We use [SemVer](http://semver.org/) for versioning. For the versions available,
-see the [releases on this repository](https://github.com/astrochun/voxcharta-my-voting-record/releases).
+see the [releases on this repository](https://github.com/astrochun/academic-ads-bibtex/releases).
 
 
 ## Authors
