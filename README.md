@@ -12,8 +12,8 @@
 
 The [Hugo Academic admin tool](https://github.com/wowchemy/hugo-academic-cli)
 allows for the ingestion of BibTeX records to add to the publication list.
-One easy solution is to use the NASA ADS to retrieve set records from the
-library. However, such records often contain LaTeX `\newcommand`.
+One easy solution is to use the NASA ADS to retrieve such records from a
+NASA ADS Library. However, such records often contain LaTeX `\newcommand`.
 For example:
 
 ```
@@ -39,7 +39,7 @@ archivePrefix = "arXiv",
 
 Here, the journal name is simplified to "\apjs". This ends up propagating into
 Hugo Academic sites. To fix this, this simple pure Python script will convert
-such aliases into the full journal name. It uses a journal database to
+such aliases into the full journal names. It uses a journal database to
 conduct the replacement.
 
 
@@ -52,7 +52,7 @@ These instructions will have the code running.
 #### Python and setting up an environment
 
 Using your preferred Python environment manager (`conda`, `venv`), I recommend
-create a separate environment to avoid any possible conflicts with
+creating a separate environment to avoid any possible conflicts with
 existing software that you used. Below are `conda` instructions
 
 ```
@@ -72,7 +72,7 @@ $ (sudo) python setup.py install
 
 The primary script to execute is [`academic_ads_bibtex`](bin/academic_ads_bibtex).
 The above installation will include this executable in your python
-environmental path.
+environment paths.
 
 Execution requires only one argument, which is the full path to the BibTeX
 file. It can be provided with the `-f` or `--filename` command-line flags.
@@ -87,8 +87,9 @@ By default:
    [bibtex_journals.db](bibtex_journals.db). This can be changed by specifying
    the `-d` or `--db_filename` command-line flag.
 2. The revised BibTeX file will be based on the input `filename` with the
-   prefix changed to include `_revised`. This can be changed by specifying
-   the `-o` or `--out_filename` command-line flag.
+   prefix changed to include `_revised`. For example, for the above case,
+   the output file will be `/full/path/to/my_pubs_revised.bbl`. This can be
+   changed by specifying the `-o` or `--out_filename` command-line flag.
 
 A log file is constructed: `/full/path/to/academic_ads_bibtex.YYYY-MM-DD.log`
 
@@ -106,5 +107,5 @@ see the [releases on this repository](https://github.com/astrochun/academic-ads-
 
 ## License
 
-This project is licensed under the [GNU GPLv3 License](https://www.gnu.org/licenses/gpl-3.0.en.html)
-- see the [LICENSE](LICENSE) file for details.
+This project is licensed under the [GNU GPLv3 License](https://www.gnu.org/licenses/gpl-3.0.en.html).
+See the [LICENSE](LICENSE) file for details.
