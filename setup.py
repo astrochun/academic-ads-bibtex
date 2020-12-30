@@ -15,6 +15,7 @@ setup(
     description='Construct a proper BibTeX file to use with the Hugo Academic theme from ADS export',
     long_description=long_description,
     long_description_content_type='text/markdown',
+    include_package_data=True,
     python_requires='>=3.7',
     classifiers=[
         'Development Status :: 4 - Beta',
