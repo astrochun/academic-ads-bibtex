@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setup(
     name='academic-ads-bibtex',
-    version='0.1.2',
+    version='0.1.3',
     packages=['academic_ads_bibtex'],
     scripts=['bin/academic_ads_bibtex'],
     url='https://github.com/astrochun/academic-ads-bibtex',
@@ -15,6 +15,8 @@ setup(
     description='Construct a proper BibTeX file to use with the Hugo Academic theme from ADS export',
     long_description=long_description,
     long_description_content_type='text/markdown',
+    include_package_data=True,
+    package_data={'': ['database/bibtex_journals.db']},
     python_requires='>=3.7',
     classifiers=[
         'Development Status :: 4 - Beta',
