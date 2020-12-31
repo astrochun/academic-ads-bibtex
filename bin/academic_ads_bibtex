@@ -4,7 +4,7 @@ import argparse
 from pathlib import Path
 
 from academic_ads_bibtex import converter
-from academic_ads_bibtex import __file__, __version__
+from academic_ads_bibtex import __version__
 from academic_ads_bibtex.logger import LogClass
 
 from datetime import date
@@ -24,8 +24,6 @@ if __name__ == '__main__':
     args = parser.parse_args()
     vargs = vars(args)
 
-    root_dir = Path(__file__).parent.parent
-
     p = Path(vargs['filename'])
     vargs['filename'] = p
 
@@ -38,9 +36,7 @@ if __name__ == '__main__':
     log.info(f"Version: {__version__}")
     log.info(f"Logs are stored in : {log_filename}")
 
-    if vargs['db_filename'] is None:
-        vargs['db_filename'] = root_dir / "bibtex_journals.db"
-    else:
+    if vargs['db_filename'] is not None:
         vargs['db_filename'] = Path(vargs['db_filename'])
 
     if vargs['out_filename'] is None:

@@ -1,4 +1,5 @@
 from .logger import log_stdout
+import pkg_resources
 
 
 class Convert:
@@ -57,12 +58,23 @@ class Convert:
 
     def import_database(self):
         """Import journal database file"""
-        self.log.info(f"Reading: {self.db_filename}")
-        with open(self.db_filename, 'r') as f:
-            content = f.read()
+        if isinstance(self.db_filename, str):
+            self.log.info(f"Reading: {self.db_filename}")
+            with open(self.db_filename, 'r') as f:
+                content = f.read()
+            f.close()
+        else:
+            if self.db_filename is None:
+                self.log.info("Importing database from source")
+                stream = pkg_resources.resource_stream(__name__, 'database/bibtex_journals.db')
+                content = stream.read().decode("utf-8")
+            else:
+                self.log.warning("Neither a filename or None was provided db_filename")
+                raise ValueError(
+                    "import_database: Neither a filename or None was provided db_filename")
         db_list = content.split("\n")
         db_dict = dict(item.split(',') for item in db_list)
-        f.close()
+
         return db_dict
 
     def replace(self):
