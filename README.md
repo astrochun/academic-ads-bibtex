@@ -53,7 +53,7 @@ These instructions will have the code running.
 
 ### Installation Instructions
 
-#### Setting up an Python environment
+#### Setting up a Python environment
 
 I recommend creating a separate (virtual) environment to avoid any possible
 conflicts with existing software that you used. Instructions are provided
@@ -131,7 +131,7 @@ see the [releases on this repository](https://github.com/astrochun/academic-ads-
 
 ## Authors
 
-* Chun Ly, Ph.D. ([@astrochun](http://www.github.com/astrochun)) - [University of Arizona Libraries](https://github.com/ualibraries), [Office of Digital Innovation and Stewardship](https://github.com/UAL-ODIS)
+* Chun Ly, Ph.D. ([@astrochun](http://www.github.com/astrochun))
 
 
 ## License
