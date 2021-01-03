@@ -1,5 +1,9 @@
 # academic-ads-bibtex
 
+![PyPI - Python Version](https://img.shields.io/pypi/pyversions/academic-ads-bibtex)
+![PyPI](https://img.shields.io/pypi/v/academic-ads-bibtex?color=blue)
+![License](https://img.shields.io/github/license/astrochun/academic-ads-bibtex?color=blue)
+
 - [Overview](#overview)
 - [Getting Started](#getting-started)
     - [Installation Instructions](#installation-instructions)
@@ -49,24 +53,49 @@ These instructions will have the code running.
 
 ### Installation Instructions
 
-#### Python and setting up an environment
+#### Setting up an Python environment
 
-Using your preferred Python environment manager (`conda`, `venv`), I recommend
-creating a separate environment to avoid any possible conflicts with
-existing software that you used. Below are `conda` instructions
+I recommend creating a separate (virtual) environment to avoid any possible
+conflicts with existing software that you used. Instructions are provided
+for `conda` and `virtualenv`.
 
-```
+##### Instructions for `conda`
+
+```bash
 $ (sudo) conda create -n bibtex python=3.7
+$ conda activate bibtex
 ```
 
-Installation is straightforward:
+##### Instructions for `virtualenv`
+```bash
+$ (sudo) conda install virtualenv  # if not installed
+$ mkdir academic-ads-bibtex
+$ cd academic-ads-bibtex
+$ virtualenv venv
+$ source venv/bin/activate
 ```
-$ conda activate bibtex
+
+There are way two to get the code:
+1. From [source](https://github.com/astrochun/academic-ads-bibtex)
+2. From [PyPi](https://pypi.org/project/academic-ads-bibtex/)
+
+Installation from source:
+```bash
+# For conda
 $ git clone https://github.com/astrochun/academic-ads-bibtex.git
 $ cd academic-ads-bibtex
+
+# For virtualenv
+$ git clone https://github.com/astrochun/academic-ads-bibtex.git .
+
+# Install
 $ (sudo) python setup.py install
 ```
 
+Installation from PyPi:
+```bash
+$ (sudo) pip install academic-ads-bibtex
+```
 
 ## Execution
 
