@@ -1,6 +1,7 @@
 # academic-ads-bibtex
 
 ![PyPI](https://img.shields.io/pypi/v/academic-ads-bibtex?color=blue)
+![GitHub](https://img.shields.io/github/license/astrochun/academic-ads-bibtex?color=blue)
 
 - [Overview](#overview)
 - [Getting Started](#getting-started)
