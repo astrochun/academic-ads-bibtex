@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setup(
     name='academic-ads-bibtex',
-    version='0.1.4',
+    version='0.1.5',
     packages=['academic_ads_bibtex'],
     scripts=['bin/academic_ads_bibtex'],
     url='https://github.com/astrochun/academic-ads-bibtex',
