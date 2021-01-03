@@ -1,5 +1,7 @@
 # academic-ads-bibtex
 
+![PyPI](https://img.shields.io/pypi/v/academic-ads-bibtex?color=blue)
+
 - [Overview](#overview)
 - [Getting Started](#getting-started)
     - [Installation Instructions](#installation-instructions)
