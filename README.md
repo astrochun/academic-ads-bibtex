@@ -1,8 +1,8 @@
 # academic-ads-bibtex
 
-[![python](https://img.shields.io/badge/python-3.7+-blue.svg)]()
+![PyPI - Python Version](https://img.shields.io/pypi/pyversions/academic-ads-bibtex)
 ![PyPI](https://img.shields.io/pypi/v/academic-ads-bibtex?color=blue)
-![GitHub](https://img.shields.io/github/license/astrochun/academic-ads-bibtex?color=blue)
+![License](https://img.shields.io/github/license/astrochun/academic-ads-bibtex?color=blue)
 
 - [Overview](#overview)
 - [Getting Started](#getting-started)
