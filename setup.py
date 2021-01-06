@@ -1,11 +1,12 @@
 from setuptools import setup
 
+
 with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setup(
     name='academic-ads-bibtex',
-    version='0.1.5',
+    version='0.1.6',
     packages=['academic_ads_bibtex'],
     scripts=['bin/academic_ads_bibtex'],
     url='https://github.com/astrochun/academic-ads-bibtex',

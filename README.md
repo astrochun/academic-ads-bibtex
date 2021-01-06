@@ -4,6 +4,9 @@
 ![PyPI](https://img.shields.io/pypi/v/academic-ads-bibtex?color=blue)
 ![License](https://img.shields.io/github/license/astrochun/academic-ads-bibtex?color=blue)
 
+![PyPI - Downloads](https://img.shields.io/pypi/dm/academic-ads-bibtex?color=light%20green&label=PyPI-download&style=flat-square)
+![Hits](https://hitcounter.pythonanywhere.com/count/tag.svg?url=https%3A%2F%2Fgithub.com%2Fastrochun%2Facademic-ads-bibtex)
+
 - [Overview](#overview)
 - [Getting Started](#getting-started)
     - [Installation Instructions](#installation-instructions)
