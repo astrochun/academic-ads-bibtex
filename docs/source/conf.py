@@ -12,9 +12,10 @@
 #
 import os
 import sys
-sys.path.insert(0, os.path.abspath('../../academic_ads_bibtex/'))
-
 import sphinx_rtd_theme
+
+sys.path.insert(0, os.path.abspath('../../'))
+
 
 # -- Project information -----------------------------------------------------
 
@@ -33,6 +34,7 @@ release = '0.1.6'
 # ones.
 extensions = [
     "sphinx_rtd_theme",
+    "sphinx.ext.autodoc",
 ]
 
 # Add any paths that contain templates here, relative to this directory.
