@@ -1,24 +1,26 @@
-Documentation
-=============
+..
+   Module contents
+   ---------------
 
-Module contents
----------------
+   The ``converter`` module
 
-.. automodule:: academic_ads_bibtex.converter
-   :members:
-   :undoc-members:
-   :show-inheritance:
+   .. automodule:: academic_ads_bibtex.converter
+    :members:
+    :undoc-members:
+    :show-inheritance:
 
-.. automodule:: academic_ads_bibtex.logger
-   :members:
-   :undoc-members:
-   :show-inheritance:
+   The ``logger`` module
+
+   .. automodule:: academic_ads_bibtex.logger
+    :members:
+    :undoc-members:
+    :show-inheritance:
 
 
 The ``Converter`` class
 -----------------------
 
-.. autoclass:: academic_ads_bibtex.converter.Converter
+.. autoclass:: academic_ads_bibtex.converter.Convert
    :members:
    :undoc-members:
    :show-inheritance:

@@ -14,7 +14,7 @@ Welcome to ``academic-ads-bibtex`` documentation!
    install
    examples
    license
-   academic_ads_bibtex
+   modules
 
 Indices and tables
 ==================
