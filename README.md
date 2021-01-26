@@ -8,9 +8,10 @@
 ![Hits](https://hitcounter.pythonanywhere.com/count/tag.svg?url=https%3A%2F%2Fgithub.com%2Fastrochun%2Facademic-ads-bibtex)
 
 - [Overview](#overview)
-- [Getting Started](#getting-started)
-    - [Installation Instructions](#installation-instructions)
-- [Execution](#execution)
+- [Installation](#installation)
+    - [From PyPi](#from-pypi)
+    - [From source](#from-source)
+- [Examples](#examples)
 - [Versioning](#versioning)
 - [Authors](#authors)
 - [License](#license)
@@ -50,57 +51,61 @@ such aliases into the full journal names. It uses a journal database to
 conduct the replacement.
 
 
-## Getting Started
+## Installation
 
-These instructions will have the code running.
+There are two ways to get the code:
+1. From [PyPi](https://pypi.org/project/academic-ads-bibtex/)
+2. From [source](https://github.com/astrochun/academic-ads-bibtex)
 
-### Installation Instructions
+But first, we recommend creating a separate (virtual) environment to avoid any
+possible conflicts with existing software that you used. Instructions are
+provided for `conda` and `virtualenv`.
 
-#### Setting up a Python environment
+### From PyPi
 
-I recommend creating a separate (virtual) environment to avoid any possible
-conflicts with existing software that you used. Instructions are provided
-for `conda` and `virtualenv`.
-
-##### Instructions for `conda`
+Using `conda`:
 
 ```bash
-$ (sudo) conda create -n bibtex python=3.7
-$ conda activate bibtex
+(base) $ (sudo) conda create -n bibtex python=3.7
+(base) $ conda activate bibtex
+(bibtex) $ (sudo) pip install academic-ads-bibtex
 ```
 
-##### Instructions for `virtualenv`
+Using `virtualenv`:
+
 ```bash
-$ (sudo) conda install virtualenv  # if not installed
-$ mkdir academic-ads-bibtex
-$ cd academic-ads-bibtex
-$ virtualenv venv
-$ source venv/bin/activate
+(base) $ (sudo) conda install virtualenv  # if not installed
+(base) $ mkdir academic-ads-bibtex
+(base) $ cd academic-ads-bibtex
+(base) $ virtualenv venv
+(base) $ source venv/bin/activate
+(venv) $ pip install academic-ads-bibtex
 ```
 
-There are way two to get the code:
-1. From [source](https://github.com/astrochun/academic-ads-bibtex)
-2. From [PyPi](https://pypi.org/project/academic-ads-bibtex/)
+### From source:
 
-Installation from source:
+Using `conda`:
+
 ```bash
-# For conda
-$ git clone https://github.com/astrochun/academic-ads-bibtex.git
-$ cd academic-ads-bibtex
-
-# For virtualenv
-$ git clone https://github.com/astrochun/academic-ads-bibtex.git .
-
-# Install
-$ (sudo) python setup.py install
+(base) $ (sudo) conda create -n bibtex python=3.7
+(base) $ conda activate bibtex
+(bibtex) $ git clone https://github.com/astrochun/academic-ads-bibtex.git
+(bibtex) $ cd academic-ads-bibtex
+(bibtex) $ (sudo) python setup.py install
 ```
 
-Installation from PyPi:
+Using `virtualenv`:
+
 ```bash
-$ (sudo) pip install academic-ads-bibtex
+(base) $ (sudo) conda install virtualenv  # if not installed
+(base) $ git clone https://github.com/astrochun/academic-ads-bibtex.git
+(base) $ cd academic-ads-bibtex
+(base) $ virtualenv venv
+(base) $ source venv/bin/activate
+(venv) $ python setup.py install
 ```
 
-## Execution
+## Examples
 
 The primary script to execute is [`academic_ads_bibtex`](bin/academic_ads_bibtex).
 The above installation will include this executable in your python
@@ -116,8 +121,9 @@ $ academic_ads_bibtex -f /full/path/to/my_pubs.bbl
 By default:
 
 1. The code uses the repository-based journal database,
-   [bibtex_journals.db](bibtex_journals.db). This can be changed by specifying
-   the `-d` or `--db_filename` command-line flag.
+   [bibtex_journals.db](academic_ads_bibtex/database/bibtex_journals.db).
+   This can be changed by specifying the `-d` or `--db_filename` command-line
+   flag.
 2. The revised BibTeX file will be based on the input `filename` with the
    prefix changed to include `_revised`. For example, for the above case,
    the output file will be `/full/path/to/my_pubs_revised.bbl`. This can be
