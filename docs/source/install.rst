@@ -10,8 +10,8 @@ avoid any possible conflicts with existing software that you used.
 Instructions are provided for ``conda`` and ``virtualenv``.
 
 
-PyPi Instructions
-'''''''''''''''''
+From PyPi
+'''''''''
 
 Using ``conda``:
 
@@ -34,8 +34,8 @@ Using ``virtualenv``:
    (venv) $ pip install academic-ads-bibtex
 
 
-Source Instructions
-'''''''''''''''''''
+From Source
+'''''''''''
 
 Using ``conda``:
 
