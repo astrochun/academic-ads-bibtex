@@ -8,18 +8,17 @@ file_formatter = logging.Formatter('%(asctime)s %(levelname)8s - %(module)10s %(
 
 class LogClass:
     """
-    Main class to log information to stdout and ASCII logfile
+    Main class to log information to stdout and ASCII logfile.
 
-    Note [1]: This code is identical to the one used in:
+    Note: This code is identical to the one used in:
       https://github.com/ualibraries/LD_Cool_P
 
-    Note [2]: Logging level is set for DEBUG for file and INFO for stdout
+    Note: Logging level is set for DEBUG for file and INFO for stdout
 
     To use:
-    log = LogClass(logfile).get_logger()
+      log = LogClass(logfile).get_logger()
 
-    Parameters:
-      logfile: Filename for exported log file
+    :param logfile: str or pathlib.Path object for logging file
     """
 
     def __init__(self, logfile):
