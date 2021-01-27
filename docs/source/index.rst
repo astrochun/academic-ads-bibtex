@@ -6,7 +6,9 @@
 Welcome to ``academic-ads-bibtex`` documentation!
 =================================================
 
-|py_version|  |pypi|  |license|  |downloads|  |hits|
+|py_version|  |pypi|  |license|  |docs-build|
+
+|downloads|  |hits|
 
 .. |py_version| image:: https://img.shields.io/pypi/pyversions/academic-ads-bibtex
     :alt: PyPi version
@@ -20,12 +22,17 @@ Welcome to ``academic-ads-bibtex`` documentation!
     :alt: License
     :target: https://github.com/astrochun/academic-ads-bibtex/blob/main/LICENSE
 
+.. |docs-build| image:: https://img.shields.io/github/workflow/status/astrochun/academic-ads-bibtex/Sphinx%20Docs%20Check?label=sphinx%20docs&color=blue
+    :alt: docs build
+    :target: https://github.com/astrochun/academic-ads-bibtex/actions?query=workflow%3A%22Sphinx+Docs+Check%22
+
 .. |downloads| image:: https://img.shields.io/pypi/dm/academic-ads-bibtex?color=light%20green&label=PyPI-download&style=flat-square
     :alt: PyPi downloads
     :target: https://pypistats.org/packages/academic-ads-bibtex
 
-.. |Hits| image:: https://hitcounter.pythonanywhere.com/count/tag.svg?url=https%3A%2F%2Fgithub.com%2Fastrochun%2Facademic-ads-bibtex
+.. |hits| image:: https://hitcounter.pythonanywhere.com/count/tag.svg?url=https%3A%2F%2Fgithub.com%2Fastrochun%2Facademic-ads-bibtex
     :alt: Hits
+
 
 .. toctree::
    :maxdepth: 3

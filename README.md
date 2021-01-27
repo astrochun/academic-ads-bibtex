@@ -3,6 +3,7 @@
 ![PyPI - Python Version](https://img.shields.io/pypi/pyversions/academic-ads-bibtex)
 ![PyPI](https://img.shields.io/pypi/v/academic-ads-bibtex?color=blue)
 ![License](https://img.shields.io/github/license/astrochun/academic-ads-bibtex?color=blue)
+[![GitHub Workflow Status](https://img.shields.io/github/workflow/status/astrochun/academic-ads-bibtex/Sphinx%20Docs%20Check?label=sphinx%20docs&color=blue)](https://github.com/astrochun/academic-ads-bibtex/actions?query=workflow%3A%22Sphinx+Docs+Check%22)
 
 ![PyPI - Downloads](https://img.shields.io/pypi/dm/academic-ads-bibtex?color=light%20green&label=PyPI-download&style=flat-square)
 ![Hits](https://hitcounter.pythonanywhere.com/count/tag.svg?url=https%3A%2F%2Fgithub.com%2Fastrochun%2Facademic-ads-bibtex)
