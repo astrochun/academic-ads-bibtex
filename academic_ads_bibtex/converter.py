@@ -9,12 +9,11 @@ class Convert:
     :param filename: str or pathlib.Path object
     :param db_filename: str or pathlib.Path object
     :param out_filename: str or pathlib.Path object
+    :param log: LogClass or logger object
 
-    Attributes
-    ----------
-    bibtex_content: str (from import_file)
-    db_dict: dict of journal database (from import_database)
-    bibtex_revised: str (from replace)
+    :ivar bibtex_content: str (from import_file)
+    :ivar db_dict: dict of journal database (from import_database)
+    :ivar bibtex_revised: str (from replace)
 
     Methods
     -------
