@@ -1,0 +1,17 @@
+name: "Sphinx Docs Check"
+on:
+  push:
+    paths:
+      'docs/**'
+  pull_request:
+    paths:
+      'docs/**'
+
+jobs:
+  docs:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - uses: ammaraskar/sphinx-action@master
+      with:
+        docs-folder: "docs/"
