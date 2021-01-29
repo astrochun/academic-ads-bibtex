@@ -3,9 +3,11 @@ on:
   push:
     paths:
       'docs/**'
+      'academic_ads_bibtex/*.py'
   pull_request:
     paths:
       'docs/**'
+      'academic_ads_bibtex/*.py'
 
 jobs:
   docs:
