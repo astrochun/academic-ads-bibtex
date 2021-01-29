@@ -10,13 +10,13 @@ class Convert:
     Main class to perform BibTeX conversion for Academic compatibility
 
     :param filename: BibTeX file
-    :param db_filename: Database file
+    :param db_filename: Journal database file
     :param out_filename: Modified BibTeX file
     :param log: LogClass or logger object
 
-    :ivar bibtex_content: str (from ``import_file`` method)
-    :ivar db_dict: dict of journal database (from ``import_database`` method)
-    :ivar bibtex_revised: str (from ``replace`` method)
+    :ivar str bibtex_content: BiBTeX content (from ``import_file`` method)
+    :ivar dict db_dict: Journal database dict (from ``import_database`` method)
+    :ivar str bibtex_revised: BibTeX content (from ``replace`` method)
     """
 
     def __init__(self, filename: Union[str, Path],
