@@ -8,6 +8,8 @@
 ![PyPI - Downloads](https://img.shields.io/pypi/dm/academic-ads-bibtex?color=light%20green&label=PyPI-download&style=flat-square)
 ![Hits](https://hitcounter.pythonanywhere.com/count/tag.svg?url=https%3A%2F%2Fgithub.com%2Fastrochun%2Facademic-ads-bibtex)
 
+API documentation is available at: [ReadTheDocs](academic-ads-bibtex.readthedocs.io)
+
 - [Overview](#overview)
 - [Installation](#installation)
     - [From PyPi](#from-pypi)
