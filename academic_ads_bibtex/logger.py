@@ -1,6 +1,9 @@
+from pathlib import Path
+from typing import Union
 import sys
 
 import logging
+
 formatter = logging.Formatter('%(asctime)s - %(levelname)8s: %(message)s', "%H:%M:%S")
 file_formatter = logging.Formatter('%(asctime)s %(levelname)8s - %(module)10s %(funcName)15s : %(message)s',
                                    "%H:%M:%S")
@@ -10,21 +13,18 @@ class LogClass:
     """
     Main class to log information to stdout and ASCII logfile.
 
-    Note: This code is identical to the one used in:
-      https://github.com/ualibraries/LD_Cool_P
-
-    Note: Logging level is set for DEBUG for file and INFO for stdout
+    Note: Logging level is set to DEBUG for file and INFO for stdout
 
     To use:
-      log = LogClass(logfile).get_logger()
+      ``log = LogClass(logfile).get_logger()``
 
-    :param logfile: str or pathlib.Path object for logging file
+    :param logfile: Filename for log file
     """
 
-    def __init__(self, logfile):
+    def __init__(self, logfile: Union[str, Path]):
         self.LOG_FILENAME = logfile
 
-    def get_logger(self):
+    def get_logger(self) -> logging.Logger:
         file_log_level = logging.DEBUG  # This is for file logging
         log = logging.getLogger("main_logger")
         if not log.handlers:
@@ -45,7 +45,9 @@ class LogClass:
         return log
 
 
-def log_stdout():
+def log_stdout() -> logging.Logger:
+    """Stdout logging"""
+
     log_level = logging.INFO
     log = logging.getLogger("stdout_logger")
     if not log.handlers:
