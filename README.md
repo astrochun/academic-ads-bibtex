@@ -8,6 +8,8 @@
 ![PyPI - Downloads](https://img.shields.io/pypi/dm/academic-ads-bibtex?color=light%20green&label=PyPI-download&style=flat-square)
 ![Hits](https://hitcounter.pythonanywhere.com/count/tag.svg?url=https%3A%2F%2Fgithub.com%2Fastrochun%2Facademic-ads-bibtex)
 
+API documentation is available at: [ReadTheDocs](https://academic-ads-bibtex.readthedocs.io)
+
 - [Overview](#overview)
 - [Installation](#installation)
     - [From PyPi](#from-pypi)
@@ -62,7 +64,7 @@ But first, we recommend creating a separate (virtual) environment to avoid any
 possible conflicts with existing software that you used. Instructions are
 provided for `conda` and `virtualenv`.
 
-### From PyPi
+### From PyPi:
 
 Using `conda`:
 
