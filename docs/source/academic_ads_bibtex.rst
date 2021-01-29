@@ -32,3 +32,8 @@ The ``LogClass`` class
    :members:
    :undoc-members:
    :show-inheritance:
+
+The ``log_stdout`` function
+---------------------------
+
+.. autofunction:: academic_ads_bibtex.logger.log_stdout
