@@ -2,12 +2,12 @@ name: "Sphinx Docs Check"
 on:
   push:
     paths:
-      'docs/**'
-      'academic_ads_bibtex/*.py'
+    - 'docs/**'
+    - 'academic_ads_bibtex/*.py'
   pull_request:
     paths:
-      'docs/**'
-      'academic_ads_bibtex/*.py'
+    - 'docs/**'
+    - 'academic_ads_bibtex/*.py'
 
 jobs:
   docs:
