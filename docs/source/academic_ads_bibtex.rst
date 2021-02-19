@@ -1,39 +1,12 @@
-..
-   Module contents
-   ---------------
+academic-ads-bibtex package
+===========================
 
-   The ``converter`` module
+The ``class`` that is frequently used for this package is :class:`converter.Convert`
 
-   .. automodule:: academic_ads_bibtex.converter
-    :members:
-    :undoc-members:
-    :show-inheritance:
+Submodules
+----------
 
-   The ``logger`` module
+.. toctree::
+   :maxdepth: 4
 
-   .. automodule:: academic_ads_bibtex.logger
-    :members:
-    :undoc-members:
-    :show-inheritance:
-
-
-The ``Converter`` class
------------------------
-
-.. autoclass:: academic_ads_bibtex.converter.Convert
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-The ``LogClass`` class
-----------------------
-
-.. autoclass:: academic_ads_bibtex.logger.LogClass
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-The ``log_stdout`` function
----------------------------
-
-.. autofunction:: academic_ads_bibtex.logger.log_stdout
+   academic_ads_bibtex.submodules
